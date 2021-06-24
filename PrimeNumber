@@ -1,0 +1,43 @@
+using System;
+
+namespace Fridayactivity25thJune
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, i, flag = 0;
+            Console.WriteLine("Enter a number");
+            n = Convert.ToInt32(Console.ReadLine());
+            PrimeNumber(n);
+        }
+
+
+        static void PrimeNumber(int n)
+        {
+            int flag = 0;
+            for (int i = 2; i <= n / 2; i++)
+            {
+
+                if (n % i == 0)
+                {
+                    flag = 1;
+                }
+            }
+            if (n == 1)
+            {
+                Console.WriteLine("1 is neither prime nor composite.");
+            }
+            else
+            {
+                if (flag == 0)
+                    Console.WriteLine(n + " is a prime number.");
+                else
+                    Console.WriteLine(n + " is not a prime number.");
+            }
+        }
+    }
+}
+        
+    
+
