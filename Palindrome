@@ -1,0 +1,44 @@
+using System;
+
+namespace Palindrome
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n;
+            Console.Write("Enter a number: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            palindrome(n);
+        }
+
+            static void palindrome(int n)
+            {
+                int rem, reverse = 0;
+
+
+                
+                int original = n;
+                while (n != 0)
+                {
+
+                    rem = n % 10;
+                    reverse = reverse * 10 + rem;
+                    n /= 10;
+                }
+
+                if (original == reverse)
+                {
+                    Console.WriteLine(original + " is a palindrome");
+                }
+                else
+                {
+                    Console.WriteLine(original + " not a palindrome");
+                }
+            }
+        }
+ }
+        
+    
+
+
