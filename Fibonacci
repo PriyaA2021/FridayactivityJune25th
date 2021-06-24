@@ -1,0 +1,35 @@
+using System;
+
+namespace Fibonacciseries
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, num1 = 0, num2 = 1;
+            
+            Console.WriteLine("Enter a number");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(num1);
+            Console.WriteLine(num2);
+            fibonacciseries(n);
+        }
+            static void fibonacciseries(int n)
+            {
+                int num1=0,num2=1, newnum;
+                newnum = num1 + num2;
+                for (int i = 2; i <n; i++)
+                {
+
+                Console.WriteLine(newnum);
+                num1 = num2;
+                num2 = newnum;
+                newnum = num1 + num2;
+                
+
+
+            }
+            }
+
+        }
+    }
